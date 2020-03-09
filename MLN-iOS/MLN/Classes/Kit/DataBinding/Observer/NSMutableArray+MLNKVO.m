@@ -118,6 +118,7 @@ NS_INLINE  Class MLNCreateSubClass(Class class, NSString *subName) {
     Class originClass = self.mlnkvo_originClass;
     if (isStart && originClass) {
         object_setClass(self, originClass);
+        self.mlnkvo_originClass = nil;
     }
 }
 
@@ -218,13 +219,14 @@ shold override five primitive methods
         if (index < self.count) {
             oldValue = [self objectAtIndex:index];
         }
-        CallIMP(
-                NSIndexSet *set = [NSIndexSet indexSetWithIndex:index];
-                ((void(*)(id,SEL,NSUInteger,id))imp)(self, origin,index,object)
-                )
-        AfterIMP(
-                 [self mln_notifyAllObserver:NSKeyValueChangeReplacement indexSet:set newValue:object oldValue:oldValue]
-                 )
+        GetIMP();
+//        CallIMP(
+        NSIndexSet *set = [NSIndexSet indexSetWithIndex:index];
+        ((void(*)(id,SEL,NSUInteger,id))imp)(self, origin,index,object);
+//                )
+//        AfterIMP(
+        [self mln_notifyAllObserver:NSKeyValueChangeReplacement indexSet:set newValue:object oldValue:oldValue];
+//                 )
 
     } forceAddOriginImpBlock:placeholderBlock];
 }

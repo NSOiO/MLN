@@ -107,6 +107,16 @@
     if ([array isKindOfClass:[NSMutableArray class]]) {
         [(NSMutableArray *)array mln_startKVO];
     }
+    
+    NSMutableArray *first = array.firstObject;
+    if ([first isKindOfClass:[NSMutableArray class]]) {
+        for (NSMutableArray *arr in array) {
+            if ([arr isKindOfClass:[NSMutableArray class]]) {
+                [arr mln_startKVO];
+            }
+        }
+    }
+
     [self bindData:array forKey:key];
 }
 

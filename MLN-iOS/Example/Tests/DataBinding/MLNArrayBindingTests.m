@@ -97,13 +97,16 @@ describe(@"observer", ^{
         expect(result).to.beTruthy();
     });
     
-    // other methods
+    // NSExtendedMutableArray
     it(@"removeObject", ^{
         NSUInteger index = 3;
         id old = modelsArray[3];
         observerBlock(NSKeyValueChangeRemoval, index, modelsArray.count - 1, nil, old);
         [modelsArray removeObject:old];
         expect(result).to.beTruthy();
+    });
+    it(@"exchangeObjectAtIndex_withObjectAtIndex", ^{
+        [modelsArray exchangeObjectAtIndex:8 withObjectAtIndex:3];
     });
     // NSExtendedMutableArray
     /*
