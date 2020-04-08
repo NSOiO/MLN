@@ -508,8 +508,21 @@
 
 - (MLNLayoutEngine *)layoutEngine
 {
+    static NSMutableDictionary *layouts;
+    if (!layouts) {
+        layouts = [NSMutableDictionary dictionary];
+    }
     if (!_layoutEngine) {
-        _layoutEngine = [[MLNLayoutEngine alloc] initWithLuaInstance:self];
+//        _layoutEngine = [[MLNLayoutEngine alloc] initWithLuaInstance:self];
+        if (self.entryFilePath) {
+            _layoutEngine = [layouts objectForKey:self.entryFilePath];
+        }
+        if (!_layoutEngine) {
+            _layoutEngine = [[MLNLayoutEngine alloc] initWithLuaInstance:self];
+        }
+        if (self.entryFilePath) {
+            [layouts setObject:_layoutEngine forKey:self.entryFilePath];
+        }
     }
     return _layoutEngine;
 }
