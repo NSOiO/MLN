@@ -14,6 +14,8 @@
 		00A0C9A1243C3C0500F0D003 /* LuaNativeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A0C9A0243C3C0500F0D003 /* LuaNativeUITests.m */; };
 		00DA72B9243ED12700981719 /* MLNReflectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA72B8243ED12700981719 /* MLNReflectTests.m */; };
 		00DA72BC243F011700981719 /* DataBindTest.lua in Resources */ = {isa = PBXBuildFile; fileRef = 00DA72BA243F011100981719 /* DataBindTest.lua */; };
+		00DA72BF2441C84100981719 /* MLNBridgeNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA72BE2441C84100981719 /* MLNBridgeNormal.m */; };
+		00DA72C22441CBE400981719 /* MLNTestEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA72C12441CBE400981719 /* MLNTestEmpty.m */; };
 		00E652532417695900A878B8 /* MLNDataBindHotReload.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E652522417695900A878B8 /* MLNDataBindHotReload.m */; };
 		00E6525624176A0F00A878B8 /* MLNDataBindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E6525524176A0F00A878B8 /* MLNDataBindModel.m */; };
 		00E6525C2418EFF200A878B8 /* MLNDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E6525B2418EFF200A878B8 /* MLNDictionaryTests.m */; };
@@ -132,6 +134,10 @@
 		00A0C9A2243C3C0500F0D003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DA72B8243ED12700981719 /* MLNReflectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNReflectTests.m; sourceTree = "<group>"; };
 		00DA72BA243F011100981719 /* DataBindTest.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = DataBindTest.lua; sourceTree = "<group>"; };
+		00DA72BD2441C84100981719 /* MLNBridgeNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLNBridgeNormal.h; sourceTree = "<group>"; };
+		00DA72BE2441C84100981719 /* MLNBridgeNormal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNBridgeNormal.m; sourceTree = "<group>"; };
+		00DA72C02441CBE400981719 /* MLNTestEmpty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLNTestEmpty.h; sourceTree = "<group>"; };
+		00DA72C12441CBE400981719 /* MLNTestEmpty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNTestEmpty.m; sourceTree = "<group>"; };
 		00E652512417695900A878B8 /* MLNDataBindHotReload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLNDataBindHotReload.h; sourceTree = "<group>"; };
 		00E652522417695900A878B8 /* MLNDataBindHotReload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNDataBindHotReload.m; sourceTree = "<group>"; };
 		00E6525424176A0F00A878B8 /* MLNDataBindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLNDataBindModel.h; sourceTree = "<group>"; };
@@ -804,6 +810,10 @@
 				30E24E8E22F3D74900A0E78C /* MLNStaticTest.m */,
 				30E24E9122F3D74900A0E78C /* MLNTestMe.h */,
 				30E24E8B22F3D74900A0E78C /* MLNTestMe.m */,
+				00DA72BD2441C84100981719 /* MLNBridgeNormal.h */,
+				00DA72BE2441C84100981719 /* MLNBridgeNormal.m */,
+				00DA72C02441CBE400981719 /* MLNTestEmpty.h */,
+				00DA72C12441CBE400981719 /* MLNTestEmpty.m */,
 			);
 			path = BridgeTest;
 			sourceTree = "<group>";
@@ -1087,6 +1097,7 @@
 				B2DD3E5E237990E9002AB6AD /* MLNPackage.m in Sources */,
 				B27F65B02377AA9700F2D341 /* MLNDiscoverAblbumDeatilHeaderView.m in Sources */,
 				B29500CA23725EB800F48F09 /* UIImage+MLNResize.m in Sources */,
+				00DA72BF2441C84100981719 /* MLNBridgeNormal.m in Sources */,
 				B27F658C2377AA6C00F2D341 /* MLNGalleryMineBottomPage.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B29500B72371A3ED00F48F09 /* MLNGalleryMainViewController.m in Sources */,
@@ -1095,6 +1106,7 @@
 				30E24E9322F3D74A00A0E78C /* MLNTestMe.m in Sources */,
 				FA4EE2FD237907B000449250 /* MLNGalleryMinePageCellHomeModel.m in Sources */,
 				00A0C999243C180500F0D003 /* MLNPerformanceTestController.m in Sources */,
+				00DA72C22441CBE400981719 /* MLNTestEmpty.m in Sources */,
 				FA383453239A4C61000F900E /* MLNHomeViewController.m in Sources */,
 				B27F65CC2377AAAE00F2D341 /* MLNGalleryMessageToolCell.m in Sources */,
 				B27F658F2377AA6C00F2D341 /* MLNGalleryMineInfoViewModel.m in Sources */,
