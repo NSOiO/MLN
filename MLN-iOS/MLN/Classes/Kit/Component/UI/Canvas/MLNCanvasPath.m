@@ -65,11 +65,11 @@
     [self.bezierPath addCurveToPoint:CGPointMake(endX, endY) controlPoint1:CGPointMake(controlX1, controlY1) controlPoint2:CGPointMake(controlX2, controlY2)];
 }
 
-- (void)lua_addArcWith:(CGFloat)centerX centerY:(CGFloat)centerY radius:(CGFloat)radius startAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle clockwise:(BOOL)clockwise
+- (void)lua_addArcWith:(CGFloat)centerX centerY:(CGFloat)centerY radius:(CGFloat)radius startAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle
 {
     startAngle = startAngle / 360.0 * M_PI * 2;
     endAngle = endAngle / 360.0 * M_PI * 2;
-    [self.bezierPath addArcWithCenter:CGPointMake(centerX, centerY) radius:radius startAngle:startAngle endAngle:endAngle clockwise:clockwise];
+    [self.bezierPath addArcWithCenter:CGPointMake(centerX, centerY) radius:radius startAngle:startAngle endAngle:endAngle clockwise:endAngle - startAngle];
 }
 
 - (void)lua_addRect:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom
@@ -119,7 +119,7 @@ LUA_EXPORT_METHOD(moveTo, "lua_moveTo:toY:", MLNCanvasPath)
 LUA_EXPORT_METHOD(lineTo, "lua_lineTo:toY:", MLNCanvasPath)
 LUA_EXPORT_METHOD(quadTo, "lua_quadTo:endY:controlX:controlY:", MLNCanvasPath)
 LUA_EXPORT_METHOD(cubicTo, "lua_cubicTo:endY:controlX1:controlY1:controlX2:controlY2:", MLNCanvasPath)
-LUA_EXPORT_METHOD(arcTo, "lua_addArcWith:centerY:radius:startAngle:endAngle:clockwise:", MLNCanvasPath)
+LUA_EXPORT_METHOD(arcTo, "lua_addArcWith:centerY:radius:startAngle:endAngle", MLNCanvasPath)
 LUA_EXPORT_METHOD(addArc, "lua_addArcWith:centerY:radius:startAngle:endAngle:clockwise:", MLNCanvasPath)
 LUA_EXPORT_METHOD(addPath, "lua_addPath:", MLNCanvasPath)
 LUA_EXPORT_METHOD(addRect, "lua_addRect:top:right:bottom:", MLNCanvasPath)
