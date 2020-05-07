@@ -111,15 +111,65 @@
 //} mln_objc_method;
 
 static const struct mln_objc_method mln_Method_MLNSwitch [] = {
-    {("on"), (((void*)0)), ("MLNSwitch"), (__objc_yes), ("lua_setOn:"), ("lua_on"), (mln_lua_obj_method)},
-    {("setSwitchChangedCallback"), ("lua_setSwitchChangedCallback:"), ("MLNSwitch"), (__objc_no), (((void*)0)), (((void*)0)), (mln_lua_obj_method)},
+    {
+        ("on"), // method name in lua
+        (((void*)0)), // oc method name
+        ("MLNSwitch"), // class name
+        (__objc_yes), // isProperty
+        ("lua_setOn:"), //getter method name
+        ("lua_on"), // setter method name
+        (mln_lua_obj_method) // C function in lua
+    },
+    {
+        ("setSwitchChangedCallback"),
+        ("lua_setSwitchChangedCallback:"),
+        ("MLNSwitch"),
+        (__objc_no),
+        (((void*)0)),
+        (((void*)0)),
+        (mln_lua_obj_method)
+    },
     {((void*)0), ((void*)0), ((void*)0), __objc_no, ((void*)0), ((void*)0), ((void*)0)}
 };
 
+///**
+// 类描述信息结构体
+// */
+//typedef struct mln_objc_class {
+//    const char *pkg; /* packge name */
+//    const char *clz; /* Object-C class name */
+//    const char *l_clz; /* Object-C class name in lua */
+//    const char *l_name; /* Object-C class name in lua */
+//    const char *l_type; /* its type of Object-C class in lua  */
+//    BOOL isRoot; /* is root function,it should be YES if no base class. */
+//    const char *supreClz; /* base Object-C class */
+//    BOOL hasConstructor; /* it should be NO if static class. */
+//    MLN_Method_List methods; /* Object-C method */
+//    MLN_Method_List clz_methods; /* Object-C class method */
+//    struct mln_objc_method constructor; /* Object-C constructor method */
+//} mln_objc_class;
+
 static const struct mln_objc_class mln_Clazz_Info_MLNSwitch =
 {
-    "mln","MLNSwitch","Switch","mln" "." "Switch","MLN_UserDataNativeObject",
-    !(__objc_yes),"MLNView",__objc_yes,(struct mln_objc_method *)mln_Method_MLNSwitch,((void*)0),{("constructor"), (((void*)0)), ("MLNSwitch"), (__objc_no), (((void*)0)), (((void*)0)), (mln_lua_constructor)}
+    "mln", // package name
+    "MLNSwitch",// class name
+    "Switch", // class name in lua
+    "mln" "." "Switch", // class name in lua
+    "MLN_UserDataNativeObject", // type of class in lua
+    !(__objc_yes), // is root function,it should be YES if no base class
+    "MLNView", // super class
+    __objc_yes,// hasConstrctor, it should be NO if static class
+    (struct mln_objc_method *)mln_Method_MLNSwitch, // OC method
+    ((void*)0), // OC class method
+    {
+        ("constructor"),
+        (((void*)0)),
+        ("MLNSwitch"),
+        (__objc_no),
+        (((void*)0)),
+        (((void*)0)),
+        (mln_lua_constructor)
+    } // OC constructor method
 };
 
 + (const mln_objc_class *)mln_clazzInfo{
