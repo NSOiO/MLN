@@ -37,7 +37,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"resources.bundle/idle" ofType:nil];
+//    NSURL *url = [NSURL fileURLWithPath:path];
     
+    NSError *error;
+    NSArray *paths = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+    
+    NSArray *sourts = [paths sortedArrayUsingComparator:^NSComparisonResult(NSString *  _Nonnull obj1, NSString *  _Nonnull obj2) {
+//        NSRange r1 = [obj1 rangeOfString:@"@"];
+//        NSRange r2 = [obj2 rangeOfString:@"@"];
+//        
+//        obj1 = [obj1 substringToIndex:r1.location];
+//        obj2 = [obj2 substringToIndex:r2.location];
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
     
     NSMutableArray *arr = @[].mutableCopy;
     

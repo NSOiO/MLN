@@ -10,6 +10,9 @@
 		0011BBB32410AC3F003AE819 /* MLNDatabindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011BBB22410AC3F003AE819 /* MLNDatabindingTests.m */; };
 		0011BBB72410AC6F003AE819 /* MLNTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011BBB62410AC6F003AE819 /* MLNTestModel.m */; };
 		009DD8D524114B9600452458 /* MLNArrayBindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 009DD8D424114B9600452458 /* MLNArrayBindingTests.m */; };
+		00E9D9ED2465126800EF5784 /* resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00E9D9EC2465126800EF5784 /* resources.bundle */; };
+		00E9D9F32465168300EF5784 /* UIImage+Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D9EE2465168300EF5784 /* UIImage+Bundle.m */; };
+		00E9D9F42465168300EF5784 /* NSBundle+ImageScaled.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D9F12465168300EF5784 /* NSBundle+ImageScaled.m */; };
 		112C50D76F2A49BC8742D484 /* libPods-LuaNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F690E0F94A4E45F3BA4BF4B2 /* libPods-LuaNative.a */; };
 		3012BB102326822F00FA2BB2 /* MLNNavigatorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012BB0F2326822F00FA2BB2 /* MLNNavigatorHandler.m */; };
 		30A4EB5A231CC5CD00995416 /* MLNMyHttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A4EB59231CC5CD00995416 /* MLNMyHttpHandler.m */; };
@@ -109,6 +112,11 @@
 		0011BBB52410AC6F003AE819 /* MLNTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLNTestModel.h; sourceTree = "<group>"; };
 		0011BBB62410AC6F003AE819 /* MLNTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNTestModel.m; sourceTree = "<group>"; };
 		009DD8D424114B9600452458 /* MLNArrayBindingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLNArrayBindingTests.m; sourceTree = "<group>"; };
+		00E9D9EC2465126800EF5784 /* resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resources.bundle; sourceTree = "<group>"; };
+		00E9D9EE2465168300EF5784 /* UIImage+Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Bundle.m"; sourceTree = "<group>"; };
+		00E9D9EF2465168300EF5784 /* UIImage+Bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Bundle.h"; sourceTree = "<group>"; };
+		00E9D9F12465168300EF5784 /* NSBundle+ImageScaled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ImageScaled.m"; sourceTree = "<group>"; };
+		00E9D9F22465168300EF5784 /* NSBundle+ImageScaled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ImageScaled.h"; sourceTree = "<group>"; };
 		02612459D91635274DB7C591 /* libPods-MLN_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLN_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFEA11F75FC7C356E75DFD6 /* Pods-MLN_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLN_Example.release.xcconfig"; path = "Target Support Files/Pods-MLN_Example/Pods-MLN_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1018AD05C0E113C32A1AD38C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -310,6 +318,15 @@
 			path = DataBinding;
 			sourceTree = "<group>";
 		};
+		00E9D9F02465168300EF5784 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				00E9D9F12465168300EF5784 /* NSBundle+ImageScaled.m */,
+				00E9D9F22465168300EF5784 /* NSBundle+ImageScaled.h */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
 		4DADC4E2A37EF6A986E99F07 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +377,9 @@
 		6003F593195388D20070C39A /* Example for MLN */ = {
 			isa = PBXGroup;
 			children = (
+				00E9D9F02465168300EF5784 /* NSBundle */,
+				00E9D9EF2465168300EF5784 /* UIImage+Bundle.h */,
+				00E9D9EE2465168300EF5784 /* UIImage+Bundle.m */,
 				FAE9C59223A250CD002C830D /* gallery.bundle */,
 				FAE9C59423A2529C002C830D /* inner_demo.bundle */,
 				6003F59C195388D20070C39A /* MLNAppDelegate.h */,
@@ -383,6 +403,7 @@
 				FA383457239A64AF000F900E /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				00E9D9EC2465126800EF5784 /* resources.bundle */,
 			);
 			name = "Example for MLN";
 			path = MLN;
@@ -837,6 +858,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E9D9ED2465126800EF5784 /* resources.bundle in Resources */,
 				FA383459239A64AF000F900E /* LaunchScreen.storyboard in Resources */,
 				FAE9C59323A250CD002C830D /* gallery.bundle in Resources */,
 				30CB3BFB23684CD400AB90C6 /* MLN.podspec in Resources */,
@@ -991,6 +1013,8 @@
 				B27F65A92377AA9700F2D341 /* MLNNativeWaterfallViewCell.m in Sources */,
 				B29500D82372627000F48F09 /* MLNNativeBadgeView.m in Sources */,
 				B27F65CB2377AAAE00F2D341 /* MLNGalleryMessageDescCell.m in Sources */,
+				00E9D9F32465168300EF5784 /* UIImage+Bundle.m in Sources */,
+				00E9D9F42465168300EF5784 /* NSBundle+ImageScaled.m in Sources */,
 				B2DD3E5D237990E9002AB6AD /* MLNLuaPageViewController.m in Sources */,
 				B27F65922377AA6C00F2D341 /* MLNGalleryInfoNumberView.m in Sources */,
 				B27F65C82377AAAE00F2D341 /* MLNGalleryMessageViewController.m in Sources */,
