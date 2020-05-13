@@ -15,11 +15,12 @@
 - (void)createHeaderForRefreshView:(UIScrollView *)refreshView
 {
     __weak typeof(refreshView) weakRefreshView = refreshView;
-    refreshView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    refreshView.mj_header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
         if (weakRefreshView.lua_refreshCallback) {
             [weakRefreshView.lua_refreshCallback callIfCan];
         }
     }];
+    
 }
 
 - (BOOL)isRefreshingOfRefreshView:(UIScrollView *)refreshView

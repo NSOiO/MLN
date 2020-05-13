@@ -81,7 +81,7 @@
     [MLNKitEnvironment instancePreload];
     [MLNKitEnvironment setDefaultHttpHandler:self.httpHandler];
     [MLNKitEnvironment setDefaultScrollRefreshHandler:self.refreshHandler];
-    [MLNKitEnvironment setDefaultImageLoader:self.imgLoader];
+//    [MLNKitEnvironment setDefaultImageLoader:self.imgLoader];
     [MLNKitEnvironment setDefaultNavigatorHandler:self.navHandler];
 }
 
