@@ -20,4 +20,11 @@
     return self.containerView.mlnui_luaCore;
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer == self.panGestureRecognizer) {
+//        self.canCancelContentTouches = NO;
+        return NO;
+    }
+    return YES;
+}
 @end

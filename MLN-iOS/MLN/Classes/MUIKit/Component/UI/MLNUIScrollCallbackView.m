@@ -71,7 +71,16 @@ __VA_ARGS__;\
 #pragma mark - ScrollView Callback
 - (void)mlnui_setLuaScrollEnable:(BOOL)enable
 {
-    SCROLLVIEW_DO(scrollView.scrollEnabled = enable;)
+//    SCROLLVIEW_DO(scrollView.scrollEnabled = enable;)
+    SCROLLVIEW_DO
+    (
+//                  scrollView.panGestureRecognizer.enabled = enable;
+//                  for (UIGestureRecognizer *reg in scrollView.gestureRecognizers) {
+//                    reg.enabled = enable;
+//                  }
+     scrollView.panGestureRecognizer.cancelsTouchesInView = NO;
+     NSLog(@"set enable %d",enable);
+    )
 }
 
 - (void)setLuaui_refreshEnable:(BOOL)luaui_refreshEnable

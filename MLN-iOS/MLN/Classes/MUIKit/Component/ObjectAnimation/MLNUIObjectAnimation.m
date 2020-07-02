@@ -14,6 +14,7 @@
 #import "UIView+MLNUILayout.h"
 #import "MLNUIInteractiveBehavior.h"
 #import "MLAValueAnimation+Interactive.h"
+@import ObjectiveC;
 
 @interface MLNUIObjectAnimation()
 

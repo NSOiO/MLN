@@ -347,7 +347,8 @@ static const void *kLuaStartDeceleratingCallback = &kLuaStartDeceleratingCallbac
 
 - (void)mlnui_setLuaScrollEnable:(BOOL)enable
 {
-    self.scrollEnabled = enable;
+//    self.scrollEnabled = enable;
+    self.panGestureRecognizer.enabled = enable;
 }
 
 @end
